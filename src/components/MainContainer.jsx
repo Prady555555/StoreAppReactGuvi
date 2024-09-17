@@ -1,5 +1,5 @@
 const MainContainer = ({ title, img, price, res, handle, ind }) => {
-  const limitedTitle = title.replace(/(\r\n|\n|\r)/gm, " ").substring(0, 25);
+  const limitedTitle = title.replace(/(\r\n|\n|\r)/gm, " ").substring(0, 15);
   limitedTitle.toLowerCase();
 
   return (

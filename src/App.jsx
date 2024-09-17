@@ -18,10 +18,10 @@ function App() {
   //   }
   //   return call;
   // }, []);
-  const [count, setCount] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [warn, setWarn] = useState(false);
-  const [cartOpen, setCartOpen] = useState(true);
+  const [count, setCount] = useState([]); //this s for the data storage all data from the api
+  const [cart, setCart] = useState([]); // this is for the data storage in the cart so that we can display  the clicked items in the cart
+  const [warn, setWarn] = useState(false); // This is for the warning so that we can set warning if we doudble clck the same product it wll show the product is already in the cart
+  const [cartOpen, setCartOpen] = useState(true); // this is for the cart open and close the cart if the cart is empty then we have show some thing for this we use this .
 
   const url = "https://fakestoreapi.com/products";
   async function briliant() {
@@ -57,7 +57,7 @@ function App() {
     <>
       {cartOpen ? (
         <>
-          <div className="flex justify-end items-center  bg-gray-200  pb-8 pt-8  px-6">
+          <div className="flex justify-end items-center  bg-gray-200  pb-8 pt-8  px-6 max-md:px-2">
             <Header
               cart={cart.length}
               setCartOpen={setCartOpen}
@@ -65,7 +65,7 @@ function App() {
             />
           </div>
           <div className=" sticky">
-            {warn && <div className="text-red-600">Item already in cart</div>}
+            {warn && alert("Product is already in the cart")}
           </div>
           <div className="flex justify-center items-end min-h-screen bg-gray-200  pb-8 pt-8  px-6 ">
             <div className="grid grid-cols-4 gap-4 max-lg:gap-8 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2  ">

@@ -2,14 +2,14 @@ import { FaCartShopping } from "react-icons/fa6";
 
 const Header = ({ cart, setCartOpen, cartOpen }) => {
   return (
-    <div>
+    <div className="relative">
       <FaCartShopping
         className="text-[#960037] w-24 h-10"
         onClick={() => {
           setCartOpen(!cartOpen);
         }}
       />
-      <span>{cart}</span>
+      <span className=" text-[#960037] absolute top-2  font-bold">{cart}</span>
     </div>
   );
 };
