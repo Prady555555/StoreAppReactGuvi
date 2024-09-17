@@ -57,7 +57,7 @@ function App() {
     <>
       {cartOpen ? (
         <>
-          <div className="flex justify-end items-center  bg-[#232121]  pb-8 pt-8  px-6">
+          <div className="flex justify-end items-center  bg-gray-200  pb-8 pt-8  px-6">
             <Header
               cart={cart.length}
               setCartOpen={setCartOpen}
@@ -68,7 +68,7 @@ function App() {
             {warn && <div className="text-red-600">Item already in cart</div>}
           </div>
           <div className="flex justify-center items-end min-h-screen bg-gray-200  pb-8 pt-8  px-6 ">
-            <div className="grid grid-cols-4 gap-24 max-lg:gap-8 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2  ">
+            <div className="grid grid-cols-4 gap-4 max-lg:gap-8 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2  ">
               {count.map((res, ind) => (
                 <MainContainer
                   res={res}
